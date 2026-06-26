@@ -153,6 +153,7 @@ A documentação completa do projeto está organizada em `docs/` e no módulo de
 - [uv](https://docs.astral.sh/uv/) — gerenciador de pacotes
 - Git
 - Make (opcional, mas recomendado)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (necessário apenas para `docker-compose up`)
 
 ### Instalação do uv
 
@@ -177,6 +178,9 @@ cd FIAP-MLE-Fase01
 uv venv --python 3.12.2
 
 # Instala todas as dependências (runtime + treino/EDA + dev)
+# --extra train: MLflow, matplotlib, pandera, openpyxl (usados no treino, não vão para a imagem Docker)
+# --extra dev:   pytest, ruff, fairlearn, jupyter (ferramentas de desenvolvimento)
+# Nota: `make install` instala apenas --extra dev. Para rodar make train, use o comando abaixo.
 uv sync --extra dev --extra train
 
 # Configura as variáveis de ambiente
@@ -227,7 +231,7 @@ data/raw/Telco_customer_churn.csv
 
 | Comando          | Descrição                                                                     |
 | ---------------- | ----------------------------------------------------------------------------- |
-| `make install`   | Instala todas as dependências                                                 |
+| `make install`   | Instala dependências de desenvolvimento (`--extra dev`)                       |
 | `make mlflow-ui` | Abre o MLflow UI em `http://localhost:5001`*                                  |
 | `make train`     | Treina baselines + MLP, loga no MLflow, salva artefatos (requer MLflow ativo) |
 | `make run`       | Sobe a API FastAPI em `http://localhost:8000`                                 |
