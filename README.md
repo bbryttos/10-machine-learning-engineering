@@ -33,7 +33,7 @@ boas práticas de Machine Learning Engineering:
 ## 🗂️ Estrutura do Projeto
 
 ```
-FIAP-MLE-Fase01/
+10-machine-learning-engineering/
 ├── src/
 │   ├── api/
 │   │   ├── app.py               # FastAPI — rotas, middlewares, /metrics e health checks
@@ -171,8 +171,8 @@ pip install uv
 ### Instalação do projeto
 
 ```bash
-git clone git@github.com:bbryttos/FIAP-MLE-Fase01.git
-cd FIAP-MLE-Fase01
+git clone git@github.com:bbryttos/10-machine-learning-engineering.git
+cd 10-machine-learning-engineering
 
 # Cria o ambiente com a versão exata do Python (lê .python-version automaticamente)
 uv venv --python 3.12.2
