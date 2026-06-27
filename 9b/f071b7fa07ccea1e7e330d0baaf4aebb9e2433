@@ -1,0 +1,20 @@
+README.md
+  s_27ddd23bc2e8e3::t_ea09d509e281c2 36
+  s_27ddd23bc2e8e3::t_74b2293286a385 174-175
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "9bf071b7fa07ccea1e7e330d0baaf4aebb9e2433",
+  "prompts": {},
+  "sessions": {
+    "s_27ddd23bc2e8e3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dc299938-6074-41f7-8776-0c8f1edc70ee",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "German Eduardo Brunner <german.brunner@mercadopago.com.br>"
+    }
+  }
+}
